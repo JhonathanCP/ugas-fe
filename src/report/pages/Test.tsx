@@ -98,7 +98,7 @@ export function Test() {
                                         <Typography variant="h6">Distribución de Ventas</Typography>
                                         <ResponsiveContainer width="100%" height={250}>
                                             <PieChart>
-                                                <Pie data={dataPastel} dataKey="value" cx="50%" cy="50%" outerRadius={80} label>
+                                                <Pie data={dataPastel} dataKey="value" cx="50%" cy="50%" outerRadius={70} label>
                                                     {dataPastel.map((entry, index) => (
                                                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                                     ))}

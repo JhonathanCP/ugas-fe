@@ -3,5 +3,21 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+    "compilerOptions": {
+    "allowJs": true
+  }
 }
+// {
+//   "compilerOptions": {
+//     "jsx": "react",
+//     "moduleResolution": "node",
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "strict": true
+//   },
+//   "include": [
+//     "src/**/*",      // Incluir el directorio donde tienes tus archivos TS/TSX
+//     "custom.d.ts"    // Asegúrate de que el archivo de declaración de tipo esté incluido
+//   ]
+// }
