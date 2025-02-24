@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
     getUserById,
     getReportsForUser,
@@ -82,14 +82,16 @@ export const useUsers = () => {
         }
     };
 
-    const fetchModulesWithActiveReports = async (userId: number) => {
+    const fetchModulesWithActiveReports = async (userId: number): Promise<ModuleDTO[]> => {
         setLoading(true);
         setError(null);
         try {
             const data = await getModulesWithActiveReports(userId);
             setModules(data);
+            return data;
         } catch (err: any) {
             setError(err.message);
+            return [];
         } finally {
             setLoading(false);
         }

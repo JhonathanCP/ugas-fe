@@ -108,14 +108,16 @@ export const useModules = () => {
         }
     };
 
-    const fetchReportsByModule = async (id: number) => {
+    const fetchReportsByModule = async (id: number): Promise<ReportDTO[]> => {
         setLoading(true);
         setError(null);
         try {
             const data = await getReportsByModule(id);
             setReports(data);
+            return data;
         } catch (err: any) {
             setError(err.message);
+            return [];
         } finally {
             setLoading(false);
         }

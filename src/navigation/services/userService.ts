@@ -12,7 +12,7 @@ export const getReportsForUser = async (userId: number): Promise<ReportDTO[]> =>
 };
 
 export const addFavoriteReportToUser = async (userId: number, reportId: number): Promise<void> => {
-    await api.post(`/users/${userId}/favoriteReports/${reportId}`);
+    await api.post(`/users/${userId}/favoriteReports/${reportId}`); 
 };
 
 export const removeFavoriteReportFromUser = async (userId: number, reportId: number): Promise<void> => {

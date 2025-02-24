@@ -1,198 +1,35 @@
-/* main.css */
-
-/* Fondo de la página */
-.login-page {
-    background-image: url("../../assets/portada.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    position: relative;
+.navbar-essalud {
+    background-color: #ffffff;
 }
 
-/* Superposición de color celeste con transparencia */
-.login-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+.logo-essalud {
+    width: 55px;
+    height: auto; /* Mantener la proporción del logo */
+}
+
+.logo-divider2 {
+    width: 2px;
+    height: 50px;
+    background-color: #1677Bd;
+    margin: 0 10px;
+}
+
+.logo-ugas-container {
+    background-color: #1677Bd;
+    padding: 5px;
+}
+
+.logo-ugas {
+    width: 55px;
+    height: auto; /* Mantener la proporción del logo */
+}
+
+footer {
+    position: fixed;
     bottom: 0;
-    background-color: rgba(1, 95, 182, 0.8);
-    /* Celeste con opacidad */
-    z-index: 1;
-}
-
-/* Superponer el PixelCanvasComponent sobre el fondo */
-.pixel-canvas-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-}
-
-/* Centrar el contenedor de la tarjeta */
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    /* Asegúrate de que el contenedor esté sobre la superposición */
-}
-
-/* Estilo para el card de login */
-.login-page .login-container .login-card {
     width: 100%;
-    min-width: 350px;
-    max-width: 500px;
-    padding: 20px;
-    opacity: 0.9;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
 }
 
-/* Logo principal (Essalud) */
-.logo-img {
-    max-width: 150px;
-    margin-bottom: 20px;
-}
-
-/* Estilo para los logos pequeños (Corazón y Ugas) */
-.logo-small {
-    margin-right: 8px;
-    margin-top: 10px;
-}
-
-/* Formato de los campos de entrada y botón */
-input.form-control {
-    padding: 12px;
-    font-size: 1rem;
-}
-
-button.btn {
-    padding: 12px;
-    font-size: 1rem;
-}
-
-.title-form {
-    font-weight: bold;
-    color: #1677Bd;
-}
-
-button.button-ugas {
+.color-essalud {
     background-color: #1677Bd;
-    color: #ffffff;
-    border: none;
-    padding: 0 0;
-    height: 35px;
-}
-
-button.button-ugas:disabled {
-    background-color: #1677Bd;
-    cursor: not-allowed;
-    color: #ffffff;
-}
-
-button.button-ugas:hover {
-    background-color: #166caa;
-    color: #ffffff;
-    border: none;
-}
-
-/* Contenedor principal */
-.logo-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    gap: 0;
-}
-
-/* Logo de Essalud sin fondo */
-.essalud-logo {
-    max-width: 140px;
-    padding: 10px 20px;
-    background-color: transparent;
-}
-
-/* Contenedor del logo UGAS con fondo azul */
-.logo-divider {
-    background: #1677Bd;
-    padding: 12px 25px;
-    border-radius: 0 12px 12px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 0% 0%);
-    height: 100%;
-}
-
-/* Logo UGAS ajustado dentro del contenedor azul */
-.ugas-logo {
-    max-width: 90px;
-}
-
-/* 🔹 Corrección para móviles */
-@media (max-width: 768px) {
-    .login-container {
-        height: 100%;
-    }
-
-    .login-card {
-        max-width: 90%;
-        padding: 15px;
-    }
-
-    .logo-wrapper {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .essalud-logo {
-        max-width: 120px;
-    }
-
-    .logo-divider {
-        padding: 10px 20px;
-    }
-
-    .ugas-logo {
-        max-width: 70px;
-    }
-}
-
-/* Ajustar el botón del toggle de contraseña */
-.toggle-password {
-    border: none;
-    background: transparent;
-    padding: 0 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.toggle-password svg {
-    font-size: 1.2rem;
-    color: #1677Bd;
-}
-
-.pixel-canvas-overlay {
-    position: absolute;
-    z-index: 1;
-}
-
-.grecaptcha-badge {
-    z-index: 2
-}
-
-.title-login {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #1677Bd;
 }

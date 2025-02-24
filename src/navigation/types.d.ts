@@ -31,13 +31,6 @@ export interface ReportTypeDTO {
   description: string;
 }
 
-export interface ModuleDTO {
-  idModule: number;
-  name: string;
-  description: string;
-  active: boolean;
-}
-
 export interface ReportDTO {
   idReport: number;
   name: string;
@@ -47,4 +40,12 @@ export interface ReportDTO {
   reportStatus: ReportStatusDTO;
   module: ModuleDTO;
   active: boolean;
+}
+
+export interface ModuleDTO {
+  idModule: number;
+  name: string;
+  description: string;
+  active: boolean;
+  reports: ReportDTO[]; // Añadir esta línea
 }

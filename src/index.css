@@ -1,3 +1,7 @@
+body {
+  font-family: "Open Sans", serif !important;
+}
+
 .pixel-container {
     display: grid;
     grid-template-columns: repeat(20, 1fr);
@@ -20,5 +24,3 @@
   .pixel:hover {
     background-color: var(--hover-color); /* Color al pasar el mouse */
   }
-
-  
