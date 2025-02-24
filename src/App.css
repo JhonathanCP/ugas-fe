@@ -1,0 +1,22 @@
+.pixel-container {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 5px;
+    width: 300px;
+    height: 150px;
+  }
+  
+  .pixel {
+    background-color: #f0f0f0; /* Color inicial */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Transiciones */
+  }
+  
+  .pixel.active {
+    opacity: 1;
+  }
+  
+  .pixel:hover {
+    background-color: var(--hover-color); /* Color al pasar el mouse */
+  }

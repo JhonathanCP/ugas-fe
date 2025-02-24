@@ -5,19 +5,10 @@
     { "path": "./tsconfig.node.json" }
   ],
     "compilerOptions": {
-    "allowJs": true
+      "jsx": "react-jsx", // Or "react-jsx" if you're using React 17+ and the new JSX transform
+      "jsxImportSource": "react", // Esto es importante para que funcione la nueva transformación.
+      "allowJs": true, // You already have this
+      "esModuleInterop": true, // Usually necessary for imports to work correctly
+      "lib": ["dom", "esnext"] // Make sure "dom" is included
   }
 }
-// {
-//   "compilerOptions": {
-//     "jsx": "react",
-//     "moduleResolution": "node",
-//     "esModuleInterop": true,
-//     "skipLibCheck": true,
-//     "strict": true
-//   },
-//   "include": [
-//     "src/**/*",      // Incluir el directorio donde tienes tus archivos TS/TSX
-//     "custom.d.ts"    // Asegúrate de que el archivo de declaración de tipo esté incluido
-//   ]
-// }

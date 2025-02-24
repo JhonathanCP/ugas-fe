@@ -1,8 +1,8 @@
 import api from '../../core/services/tokenInterceptor';
 import { LoginRequest, JwtResponse } from "../types";
 
-export const login = async (username: string, password: string): Promise<JwtResponse> => {
-    const requestData: LoginRequest = { username, password };
+export const login = async (username: string, password: string, recaptchaToken: string): Promise<JwtResponse> => {
+    const requestData: LoginRequest = { username, password, recaptchaToken };
     const response = await api.post<JwtResponse>('/login', requestData);
     const { access_token, refresh_token } = response.data;
 
