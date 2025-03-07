@@ -95,7 +95,7 @@ export function Test() {
 
     return (
         <div className="container mt-4">
-            <h4 className="mb-4">Dashboard Interactivo</h4>
+            <h5 className="mb-4">Dashboard Interactivo</h5>
 
             {/* Filtro por Red */}
             <div className="mb-4">

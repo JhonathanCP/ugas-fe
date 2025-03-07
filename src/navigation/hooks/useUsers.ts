@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
     getUserById,
     getReportsForUser,
     addFavoriteReportToUser,
     removeFavoriteReportFromUser,
     getFavoriteReportsForUser,
-    getModulesWithActiveReports
+    getModulesWithActiveReports,
+    getActiveReportsFromModule
 } from '../services/userService';
 import { UserDTO, ReportDTO, ModuleDTO } from '../types';
 
@@ -97,6 +98,21 @@ export const useUsers = () => {
         }
     };
 
+    const fetchActiveReportsFromModule = async (userId: number, moduleId:number): Promise<ReportDTO[]> => {
+        setLoading(true);
+        setError(null);
+        try {
+            const data = await getActiveReportsFromModule(userId, moduleId);
+            setReports(data);
+            return data;
+        } catch (err: any) {
+            setError(err.message);
+            return [];
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return {
         user,
         reports,
@@ -109,6 +125,7 @@ export const useUsers = () => {
         addFavoriteReport,
         removeFavoriteReport,
         fetchFavoriteReportsForUser,
-        fetchModulesWithActiveReports
+        fetchModulesWithActiveReports,
+        fetchActiveReportsFromModule
     };
 };

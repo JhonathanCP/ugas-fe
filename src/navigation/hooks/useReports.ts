@@ -10,6 +10,7 @@ import { ReportDTO } from '../types';
 
 export const useReports = () => {
     const [reports, setReports] = useState<ReportDTO[]>([]);
+    const [report, setReport] = useState<ReportDTO | null>(null);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
 
@@ -31,7 +32,7 @@ export const useReports = () => {
         setError(null);
         try {
             const data = await getReportById(id);
-            setReports([data]);
+            setReport(data); // Guardamos el objeto directamente
         } catch (err: any) {
             setError(err.message);
         } finally {
@@ -84,6 +85,7 @@ export const useReports = () => {
 
     return {
         reports,
+        report,
         loading,
         error,
         fetchReports,

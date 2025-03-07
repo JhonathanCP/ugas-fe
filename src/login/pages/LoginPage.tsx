@@ -55,7 +55,7 @@ const LoginPage: React.FC = () => {
         });
 
         toast.success(`Bienvenido(a) ${username}! 👋`);
-        navigate("/main");
+        navigate("/home");
       } else {
         // Registrar la auditoría de acceso fallida
         await saveAudit({

@@ -40,6 +40,7 @@ export interface ReportDTO {
   reportStatus: ReportStatusDTO;
   module: ModuleDTO;
   active: boolean;
+  image: Blob;
 }
 
 export interface ModuleDTO {
@@ -48,4 +49,5 @@ export interface ModuleDTO {
   description: string;
   active: boolean;
   reports: ReportDTO[]; // Añadir esta línea
+  image: Blob;
 }

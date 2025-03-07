@@ -28,3 +28,8 @@ export const getModulesWithActiveReports = async (userId: number): Promise<Modul
     const response = await api.get<ModuleDTO[]>(`/users/${userId}/modules`);
     return response.data;
 };
+
+export const getActiveReportsFromModule = async (userId: number, moduleId:number): Promise<ReportDTO[]> => {
+    const response = await api.get<ReportDTO[]>(`/users/${userId}/module/${moduleId}/reports`);
+    return response.data;
+};

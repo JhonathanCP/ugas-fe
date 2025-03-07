@@ -13,6 +13,7 @@ import { ModuleDTO, ReportDTO } from '../types';
 
 export const useModules = () => {
     const [modules, setModules] = useState<ModuleDTO[]>([]);
+    const [module, setModule] = useState<ModuleDTO | null>(null);
     const [reports, setReports] = useState<ReportDTO[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
@@ -31,17 +32,17 @@ export const useModules = () => {
     };
 
     const fetchModuleById = async (id: number) => {
-        setLoading(true);
-        setError(null);
-        try {
-            const data = await getModuleById(id);
-            setModules([data]);
-        } catch (err: any) {
-            setError(err.message);
-        } finally {
-            setLoading(false);
-        }
-    };
+            setLoading(true);
+            setError(null);
+            try {
+                const data = await getModuleById(id);
+                setModule(data); // Guardamos el objeto directamente
+            } catch (err: any) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
 
     const createModule = async (module: ModuleDTO) => {
         setLoading(true);
@@ -129,6 +130,7 @@ export const useModules = () => {
 
     return {
         modules,
+        module,
         reports,
         loading,
         error,

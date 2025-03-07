@@ -6,12 +6,12 @@ const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="color-essalud text-light py-1">
+        <footer className="color-essalud text-light py-2">
             <Container>
                 <Row>
                     <Col className="text-center">
-                        <small className='d-block d-md-none'>&copy; {currentYear} UGAS - ESSALUD</small>
-                        <small className='d-none d-md-block'>&copy; {currentYear} Unidad de Gestión y Análisis en Salud - ESSALUD</small>
+                        <small className='d-block d-md-none fw-bold'>&copy; {currentYear} UGAS - ESSALUD</small>
+                        <small className='d-none d-md-block fw-bold'>&copy; {currentYear} Unidad de Gestión y Análisis en Salud - ESSALUD</small>
                     </Col>
                 </Row>
             </Container>

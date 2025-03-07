@@ -1,27 +1,57 @@
+/* Estilos generales */
 .navbar-essalud {
     background-color: #ffffff;
+    border-bottom: 2px solid #1677Bd;
 }
 
 .logo-essalud {
-    width: 55px;
-    height: auto; /* Mantener la proporción del logo */
+    width: 65px;
+    height: auto;
+    /* Mantener la proporción del logo */
 }
 
 .logo-divider2 {
     width: 2px;
-    height: 50px;
+    height: 40px;
     background-color: #1677Bd;
     margin: 0 10px;
 }
 
 .logo-ugas-container {
     background-color: #1677Bd;
-    padding: 5px;
+    padding: 2px;
 }
 
 .logo-ugas {
-    width: 55px;
-    height: auto; /* Mantener la proporción del logo */
+    width: 50px;
+    height: auto;
+    /* Mantener la proporción del logo */
+}
+
+@media (max-width: 768px) {
+    .logo-essalud {
+        width: 55px;
+        height: auto;
+        /* Mantener la proporción del logo */
+    }
+    
+    .logo-divider2 {
+        width: 2px;
+        height: 40px;
+        background-color: #1677Bd;
+        margin: 0 10px;
+    }
+    
+    .logo-ugas-container {
+        background-color: #1677Bd;
+        padding: 1px;
+    }
+    
+    .logo-ugas {
+        width: 45px;
+        height: auto;
+        /* Mantener la proporción del logo */
+    }
 }
 
 footer {
@@ -31,5 +61,285 @@ footer {
 }
 
 .color-essalud {
+    /*e1f8ff*/
     background-color: #1677Bd;
+}
+
+.color-header-menu {
+    background-color: #1677Bd;
+}
+
+.color-header-menu-text {
+    color: #ffffff;
+}
+
+.color-menu {
+    background-color: #ffffff;
+}
+
+.text-essalud {
+    color: #1677Bd;
+}
+
+/* Estilos de navegación */
+.nav-link-custom {
+    padding: 15px 18px !important;
+    margin: 10px 0px!important;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s, transform 0.2s;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hover en Nav.Link */
+.nav-link-custom:hover {
+    background-color: rgba(0, 123, 255, 0.1) !important;
+    color: #1677Bd !important;
+    transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .nav-link-custom {
+        font-size: 14px !important;
+    }
+}
+
+/* Estilo cuando está activo */
+.nav-link-custom.active {
+    background-color: rgba(0, 123, 255, 0.1) !important;
+    color: #1677Bd !important;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+/* Estilos generales del contenido */
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    margin-top: auto;
+    /* Empuja el contenido superior hacia arriba */
+}
+
+/* Contenedor principal para ocupar toda la altura disponible */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ajusta la sección de módulos para ocupar el espacio disponible */
+.modules-container {
+    flex-grow: 1;
+    /* Expande este contenedor */
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Centrar verticalmente los cards dentro de la fila */
+.modules-container .row {
+    display: flex;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+    min-height: 75vh;
+    /* Ajusta según el diseño */
+}
+
+
+/* Ajustar las tarjetas */
+/* Ajusta el color de fondo y el texto de los Cards */
+.module-card {
+    width: 100%;
+    max-width: 330px !important;
+    height: 200px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+    text-align: center;
+    padding: 20px;
+    border: none;
+    /* Elimina el borde */
+    border-radius: 10px;
+    background-color: #1677Bd !important;
+    /* Fondo azul */
+    color: #ffffff;
+    /* Texto claro */
+}
+
+/* Asegura que el título y la descripción tengan el color correcto */
+.module-card .card-title,
+.module-card .card-text {
+    color: #ffffff !important;
+    /* Aplica color blanco al texto */
+}
+
+/* Efecto hover */
+.module-card:hover {
+    transform: scale(1.1);
+    background-color: #115b91 !important;
+    outline: none;
+    border-color: #1677Bd;
+    box-shadow: 0 0 150px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Contenedor de título y búsqueda */
+.modules-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Asegura que no se centre verticalmente */
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Estilo del título */
+.modules-header h2 {
+    margin: 0;
+    color: #1677Bd;
+}
+
+/* Contenedor de la barra de búsqueda */
+.search-container {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    max-height: 90%
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    /* Espacio para el icono */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s;
+    max-height: 90%
+}
+
+/* Barra de búsqueda */
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 100%;
+        padding: 5px 10px 5px 5px;
+        /* Espacio para el icono */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 12px;
+        transition: box-shadow 0.3s ease-in-out, border-color 0.3s;
+        max-height: 90%
+    }
+}
+
+/* Efecto de sombra al enfocar */
+.search-bar:focus {
+    outline: none;
+    border-color: #1677Bd;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Icono de búsqueda */
+.search-icon {
+    position: absolute;
+    right: 8px;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #1677Bd;
+    font-size: 15px;
+    pointer-events: none;
+    cursor: pointer;
+    /* No afecta la escritura */
+}
+
+.card-img {
+    width: 70px !important;
+    height: auto !important;
+    /* Mantener la proporción del logo */
+}
+
+.custom-close-button .btn-close {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(106%) contrast(101%);
+}
+
+.custom-navbar-toggle .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231677Bd' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Aumenté la altura */
+    flex-direction: column;
+}
+
+.carousel {
+    width: 90%; /* Aumenté el tamaño del carrusel */
+    max-width: 850px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Aumenté la altura */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: none; /* Evita que la imagen se agrande en la transición */
+}
+
+.text-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text-container h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text-container p {
+    font-size: 18px;
+    color: #666;
+}
+
+.text-container a {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text-container a:hover {
+    text-decoration: underline;
+}
+
+.arrowback{
+    cursor: pointer;
+}
+
+.arrowback-bi{
+    position: fixed;
 }
